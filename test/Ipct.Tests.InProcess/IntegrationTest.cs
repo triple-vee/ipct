@@ -24,6 +24,10 @@ namespace Ipct.Tests.InProcess
             _factory = factory;
         }
 
+        /// <summary>
+        /// GET to http://localhost:5000/WeatherForecast
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task TestGet()
         {
@@ -38,6 +42,10 @@ namespace Ipct.Tests.InProcess
             result.StatusCode.Should().Be(200);
         }
 
+        /// <summary>
+        /// POST of application/json to http://localhost:5000/WeatherForecast
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task TestPost()
         {
@@ -60,6 +68,10 @@ namespace Ipct.Tests.InProcess
             result.StatusCode.Should().Be(201);
         }
 
+        /// <summary>
+        /// POST of INCORRECT application/json to http://localhost:5000/WeatherForecast
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task TestPostWithBadData()
         {

@@ -14,10 +14,19 @@ namespace Ipct.Tests.Unit
     public class UnitTest
     {
         private readonly Mock<ILogger<WeatherForecastController>> _mockLogger;
+
+        /// <summary>
+        /// Note the simple ctor
+        /// </summary>
         public UnitTest()
         {
             _mockLogger = new Mock<ILogger<WeatherForecastController>>();
         }
+
+        /// <summary>
+        /// Test WeatherForecast.Get()
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public void TestGet()
         {
@@ -26,6 +35,10 @@ namespace Ipct.Tests.Unit
             results.Count().Should().Be(5);
         }
 
+        /// <summary>
+        /// Test WeatherForecast.Post()
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public void TestPost()
         {
